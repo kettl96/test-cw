@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+<script src="urban.js"></script>
+
+<div>
+
+  <!-- <script>
+    var pickRandomWord = function (words) {
+    return words[Math.floor(Math.random() * words.length)];
+  };
+  var randomWordss = ["planet", "worm","duck"];
+
+  console.log(pickRandomWord(randomWordss));
+  </script> -->
+
+
+  <!-- <script>
+    function solution(numbers) {
+  const checkIfSame = numbers.reduce((acc, item) => {
+    acc[item] = 1
+    return acc
+  }, {})
+  if (Object.keys(checkIfSame).length > 1) {
+    let largest = numbers[0]
+    let smallest = numbers[0]
+    numbers.forEach((item, index) => {
+      if (largest < item) {
+        largest = item
+      }
+      if (smallest > item) {
+        smallest = item
+      }
+    })
+    numbers.forEach((item, index) => {
+      if (item === largest) {
+        numbers.splice(index, 1, (largest - smallest))
+      }
+    })
+    return solution(numbers)
+  } else {
+    const check = numbers.reduce((acc, item) => {
+      acc += item
+      return acc 
+    }, 0)
+    return check
+  }
+}
+let arr = [6, 9, 21]
+console.log(solution(arr));
+  </script> -->
+
+  <!-- <script>
+  const greet = () => {
+ return 'hello'; 
+}
+console.log(greet());
+</script> -->
+
+  <!-- <script>
+  function isDivideBy(number, a, b) {
+    if (Number.isInteger(number / a) && Number.isInteger(number / b)) {
+      return true;
+    } 
+    return false;
+  }
+  console.log(isDivideBy(-12,2,-5));
+</script> -->
+
+  <!-- <script>
+  function capitalizeWord(word) {
+    return word[0].toUpperCase()+word.slice(1);
+}
+console.log(capitalizeWord("word"));
+</script> -->
+  <!-- 
+<script>
+  function toBinary(n){
+      return Number(n).toString(2);
+}
+console.log(toBinary(1));
+console.log(toBinary(2));
+console.log(toBinary(121));
+</script> -->
+
+
+  <!-- <script>
+  function fakeBin(x){
+    let arr = `${x}`.split('');
+    let result = arr.map((el)=> {
+      if (el < 5) {
+        return 0;
+      } else {
+        return 1;}
+    })
+    return result.join('');
+
+    
+
+
+
+
+
+
+
+
+//   for (let i = 0; i < a.length; i++){
+// if (x[i]<5) {
+//   return Number(0);  
+// } else {
+//   return Number(1);
+// }    
+//   }
+}
+console.log(fakeBin(45385593107843568));
+</script> -->
+
+  <!-- <script>
+  function digits(n) {
+
+  let arr = n.toString().split('');
+  return arr.length;
+}
+console.log(digits(51));
+</script> -->
+
+  <!-- <script>
+  function removeChar(str){
+let string = str.slice(1,-1); 
+return string;
+};
+console.log(removeChar('qwer'));
+</script> -->
+
+  <!-- <script>
+  function noSpace(x){
+let arr = x.split('');
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] = ' ') {
+    delete [i];
+  } return arr;
+}
+
+return arr;
+}
+console.log(noSpace('8 8 8'));
+</script> -->
+
+
+  <!-- <script>
+  function noSpace(x){
+    let arr = x.replace(/ /g, '');
+return arr;
+}
+console.log(noSpace('8 8 8'));
+</script> -->
+
+  <!-- <script>
+    function solution(str, ending) {
+      let ol = str.split('').slice(str.length - ending.length, str.length).join('');
+      return (ol === ending) ? true : false
+
+      // if (str[str.length - 1] == ending[ending.length - 1] &&
+      //     str[str.length - 2] == ending[ending.length - 2] &&
+      //     str[str.length - 3] == ending[ending.length - 3]) {
+      //   return true;
+      // }
+      // return false;
+    }
+    console.log(solution('bcd', 'cd'));
+  </script> -->
+  <!-- <script>
+   function simpleMultiplication(number) {
+  if (Number.isInteger(number / 2)) {
+    return number * 8;
+  } return number * 9;
+}
+ </script> -->
+
+  <!-- <script>
+  
+function finalGrade (exam, projects) {
+  if (exam>90 || projects>10) {
+  return 100;    
+  } else if (exam>75 || projects>5) {
+  return 90;    
+  } else if (exam>50 || projects>2) {
+  return 75; 
+  } else if (exam<50 || projects<0) {
+  return 0; }
+}
+// console.log(finalGrade(0, 3));
+</script> -->
+
+
+  <!-- <script>
+  console.log(!!'false');
+  console.log(!!'true');
+  console.log('true' == 'false');
+  console.log('true' == 'false');
+  console.log('true' == !!'false');
+</script> -->
+
+  <!-- <script>
+  function reverse (n) {
+  return parseInt(String(n).split('').reverse().join(''));
+}
+console.log(reverse(123));
+
+</script> -->
+
+  <!-- <script>
+  
+  function updateLight(current) {
+    
+    let arr = ["green", "yellow", "red"];
+    for (let i=0; i<arr.length; i++) {
+      if (current == arr[arr.length -1]) {
+        return arr[0];
+      }
+      else if (arr[i] == current) {
+        return arr[i+1];
+      }
+    }
+    
+  }
+  console.log(updateLight("red"))
+
+</script> -->
+
+  <!-- <script>
+  function rentalCarCost(d) {
+  if (d<3) {
+    return d*40;
+  } else if (d>=7) {
+    return d*40-50;
+  } else if (d>=3) {
+    return d*40-20;
+  }
+}
+console.log(rentalCarCost(3));
+</script> -->
+  <!-- 
+<script>
+  function typeOfSum(a, b) {
+  if (a || b == 'string') {
+    return 'string';
+  } else {
+    return 'number';
+  }
+}
+console.log(typeOfSum(12, 1));
+</script> -->
+
+  <!-- <script>
+  var ArrowFunc = function(arr) {
+    let resultArray = [];
+    for (let i = 0; i<arr.length; i++) {
+      resultArray.push(String.fromCharCode(arr[i])); 
+    }
+  return resultArray.join('');
+} 
+console.log(ArrowFunc([70,85,83,32,82,79,72,32,68,65,72]));
+</script> -->
+  <!-- <script>
+  function mergeArrays(arr1, arr2) {
+    for (let i =0; i<arr2.length; i++) {
+      arr1.push(arr2[i]);
+    } 
+    return arr1.sort(function(a,b) {
+      return a-b;
+    });
+}
+console.log(mergeArrays([1,3,5,7,9,11,12], [1,2,3,4,5,10,12]));
+</script> -->
+
+  <!-- <script>
+    function add(num1, num2) {
+       num1 =  num1.toString().split('').reverse();
+       num2 =  num2.toString().split('').reverse();
+       let max = Math.max(num1.length, num2.length);
+      let result = [];
+      for (let i = 0; i < max; i++) 
+       result.push((parseInt(num1[i]) || 0) + (parseInt(num2[i]) || 0));
+       return parseInt(result.reverse().join(''));
+        
+      }
+      
+    
+    console.log(add(123, 1234));
+  </script> -->
+
+  <!-- <script>
+  var questions = [{
+    question: "What's the currency of the USA?",
+    choices: ["US dollar", "Ruble", "Horses", "Gold"],
+    corAnswer: 0
+}, {
+    question: "Where was the American Declaration of Independence signed?",
+    choices: ["Philadelphia", "At the bottom", "Frankie's Pub", "China"],
+    corAnswer: 0
+}];
+ console.log(questions[0]);
+</script> -->
+
+  <!-- <script>
+  questions.forEach(function(q) {
+  q.usersAnswer = null
+})
+
+</script> -->
+
+  <!-- <script>
+ const colourAssociation = array =>
+  array.map(([colour, association]) => ({[colour]:association}))
+  console.log(colourAssociation([["white", "goodness"], ["blue", "tranquility"]]));
+</script> -->
+
+  <!-- <script>
+    const objA = { a: 10, b: 20, c: 30 }
+    const objB = { a: 3, c: 6, d: 3 }
+
+
+    function combine(...args) {
+      let result = {};
+      for (let i = 0; i < args.length; i++) {
+        let keysOfObjectArr = Object.keys(args[i])
+
+        keysOfObjectArr.forEach((key) => {
+          if (result[key]) {
+            result[key] = result[key] + args[i][key];
+          } else {
+            result[key] = args[i][key];
+          }
+        }, accumul)
+      }
+
+      return result;
+    }
+    console.log(combine(objA, objB, objA));
+  </script> -->
+
+  <!-- <script>
+    function nbDig(n, d) {
+      let Square = [];
+      let result = [];
+      for (let i = 0; i <= n; i++) {
+        Square.push(i ** 2);
+      }
+      
+      let arr1 = Square.join('').split('');
+      // console.log(arr1);
+
+      for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] == d) {
+          result.push(arr1[i]);
+        }
+        // console.log(result);
+      }
+       return result.length;
+    }
+    console.log(nbDig(10, 1));
+  </script> -->
+
+  <!-- <script>
+  function findMissing(arr1, arr2) {
+    let newArr1 = arr1.sort(function(a, b) {
+      return a - b;
+    });
+    let newArr2 = arr2.sort(function(a, b) {
+      return a - b;
+    });
+    let result = [];
+let max = Math.max(arr1.length, arr2.length);
+for (let i = 0; i < max; i++) {
+  if (newArr1[i] != newArr2[i]){
+    return newArr1[i];} 
+  } 
+  }
+console.log(findMissing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]));
+</script> -->
+
+  <!-- <script>
+    let units = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
+      'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+
+    let tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety', 'hundred'];
+
+    function toReadable(number) {
+      let arr = String(number).split('');
+      if (number <= 20) {
+        return units[number];
+      }
+      else if (number > 20 && number < 100) {
+        let resultTens = [];
+        if (arr[1] ==0) {
+          resultTens.push(tens[arr[0]]);
+        } else {
+          resultTens.push(tens[arr[0]], units[arr[1]]);
+        }
+        return resultTens.join(' ');
+      }
+      else if (number >= 100) {
+        let resultHundreds = [];
+        if (arr[1] == 0 && arr[2] == 0) {
+          resultHundreds.push(units[arr[0]], tens[tens.length - 1]);
+        } 
+        else if (arr[1]<2) {
+          if (arr[1]==0) {
+            resultHundreds.push(units[arr[0]], tens[tens.length - 1], units[arr[2]]);
+          }
+          else if (arr[1]==1) {
+            resultHundreds.push(units[arr[0]], tens[tens.length - 1], units[arr[1]+arr[2]]);
+          }
+        }
+        else if (arr[2]==0) {
+          resultHundreds.push(units[arr[0]], tens[tens.length - 1], tens[arr[1]]);
+        }
+        else if (arr[1] !== 1 && arr[2] !== 0) {
+          resultHundreds.push(units[arr[0]], tens[tens.length - 1], tens[arr[1]], units[arr[2]]);
+
+        }
+        return resultHundreds.join(' ');
+        
+      }
+      
+    }
+      console.log(toReadable(30));
+      console.log(typeof '9');
+      
+  </script> -->
+
+  <!-- <script>
+    function getDecimal(n){
+      let num = String(n).split(".")[1] ;
+      let whole = String(n).split('');
+      if (whole[whole.length -1] == 0) {
+        return 0;
+      } 
+      else {
+        // let result =  num.slice(-2).join('')
+        return Number(0+'.'+num);
+      }
+     
+}
+console.log(getDecimal(2.3));
+  </script> -->
+
+  <!-- <script>
+  function maxTriSum(numbers){
+    let arr1 = new Set(numbers);
+    let arr2 = [...arr1].sort(function(a,b) {
+      return b-a;}).slice(0,3);
+      let sum = arr2.reduce(function(s, el) {
+        return s+el;
+      });
+      return sum;
+};
+console.log(maxTriSum([3,2,6,8,2,3]))
+</script> -->
+
+  <!-- <script>
+function myLanguages(results) {
+  let arr = Object.entries(results).sort((a,b) => b[1]-a[1]);
+  let filterArr = []; 
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i][1]>=60) {
+      filterArr.push(arr[i][0]) 
+    }
+  }
+ return filterArr;
+}
+console.log(myLanguages({"Java" : 10, "Ruby" : 60, "Python" : 65}));
+</script> -->
+
+  <!-- <script>
+  function nicknameGenerator(name){
+let arr = name.split('');
+if (arr.length < 4) {
+  return "Error: Name too short";
+}
+else if (['a','e','i','o','u'].includes(arr[2])) {
+  return arr.slice(0, 4).join('')
+} 
+else {
+  return arr.slice(0,3).join('')
+}
+}
+console.log(nicknameGenerator("Jimmy"));
+</script> -->
+
+  <!-- <script>
+  function sortMyString(S) {
+    let arr = S.split('');
+    let part1 = [];
+    let part2 = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (i % 2 == 0) {
+        part1.push(arr[i])
+      }
+      else {
+        part2.push(arr[i])
+      }
+    }
+    let result = part1.join('') +' '+ (part2.join(''))
+    // console.log(result);
+    // console.log(part1);
+    return result;
+}
+
+console.log(sortMyString("YCOLUE'VREER"));
+</script> -->
+
+  <!-- <script>
+  console.log(Math.log2(1024));
+  function isPowerOfTwo(n){
+    if (Number.isInteger(Math.log2(1024))) {
+      return true;
+    } 
+    else { 
+      return false;
+    }
+}
+console.log(isPowerOfTwo(1021));
+</script> -->
+
+  <!-- <script>
+    function sentence(List) {
+      let filterArr = [];
+      let arr = [];
+      List.forEach((obj) => { arr.push(...Object.entries(obj)) })
+      let arrSort = arr.sort((a, b) => a[0] - b[0])
+      for (let i = 0; i < arrSort.length; i++) {
+        filterArr.push(arrSort[i][1]);
+      }
+      return filterArr.join(' ');
+    }
+    console.log(sentence([
+      { '4': 'dog' }, { '2': 'took' }, { '3': 'his' },
+      { '-2': 'Vatsan' }, { '5': 'for' }, { '6': 'a' }, { '12': 'spin' }
+    ]))
+
+  </script> -->
+
+  <!-- <script>
+var Sum = sum = function(arr){ return arr.reduce( (previousValue, currentValue) => previousValue + currentValue); };    
+
+console.log(sum([[1,2,3,4,5,6,7,8,9,10],[71,-548,12.3,83,-47,-1.7,-892,58,31415,2718,-38]]));
+  </script> -->
+
+  <!-- <script>
+    var Sum = 'sum = function(arr){ return arr.reduce((a,b)=>a+b,0 ); }'; 
+    console.log(Sum([[1,2,3,4,5,6,7,8,9,10],[71,-548,12.3,83,-47,-1.7,-892,58,31415,2718,-38]]));
+  </script> -->
+
+  <!-- <script>
+    function vowelOne(s) {
+      let vowels = ['a', 'e', 'i', 'o', 'u'];
+      let vowelsUp = vowels.join('').toUpperCase().split('')
+      console.log(vowelsUp);
+      let arr = s.split('');
+      let result = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (vowels.includes(arr[i]) || vowelsUp.includes(arr[i])) {
+          result.push(1);
+        } else {
+          result.push(0);
+        }
+      }
+      return String(result.join(''))
+    }
+    console.log(vowelOne('acDAc'));
+  </script> -->
+
+  <!-- <script>
+
+  function killer(suspectInfo, dead) {
+    let body = dead.join(', ');
+    // console.log(dead);
+    // console.log( body);
+    for (key in suspectInfo) {
+      console.log(suspectInfo[key].includes(dead[0] && dead[1]));
+      if (suspectInfo[key].includes(dead[0])) {
+        console.log(suspectInfo[key]);
+    return  key;
+  }
+}
+console.log(suspectInfo[key]);
+for (key in suspectInfo){}
+suspectInfo.forEach( d => dead(d))
+return suspectInfo
+}
+
+console.log(killer({'James': ['Jacob',  'Lucas'], 
+'Johnny': ['David', 'Kyle', 'Bill', 'Lucas'], 
+'Peter': ['Lucy', 'Kyle']}, 
+['Lucas', 'Bill']));
+
+</script> -->
+
+  <!-- <script>
+    function killer(suspectInfo, dead) {
+      let counter = 0;
+      // console.log(dead);
+      for (key in suspectInfo) {
+        // console.log(suspectInfo[key]);
+        for (let i = 0; i < dead.length; i++) {
+          if (suspectInfo[key].includes(dead[i])) {
+            counter += 1;
+          } 
+        } 
+        if (counter === dead.length) {
+          return key;
+        }
+        //  else {
+        //   counter = 0;
+        // }
+      }
+    }
+
+
+
+
+    console.log(killer({
+      'James': ['Jacob', 'Lucas'],
+      'Peter': ['Lucy', 'Kyle', 'Lucas'],
+      'Johnny': ['David', 'Kyle', 'Lucas', 'Bill'],
+    },
+      ['Lucas', 'Bill']));
+  </script> -->
+
+  <!-- <script>
+ function dataReverse(data){
+  if (data.length===0) return []
+  const arrayBytes = [];
+  const byt = data.length / 8;
+  for (var i = 0; i < byt; i++){
+    arrayBytes.push(data.splice(0,8));
+  }
+  return arrayBytes.reverse().join().split(',').map(x=>x*1);
+}
+
+console.log(dataReverse([1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]));
+  </script> -->
+
+  <!-- <script>
+  function ColorToHex(color) {
+  var hexadecimal = color.toString(16);
+  console.log(hexadecimal);
+  return hexadecimal.length == 1 ? "0" + hexadecimal : hexadecimal;
+}
+
+function ConvertRGBtoHex(red, green, blue) {
+  console.log(red+green+blue.toString(16));
+  return "#" + ColorToHex(red) + ColorToHex(green) + ColorToHex(blue);
+}
+console.log(ConvertRGBtoHex(300,255,255));
+</script> -->
+
+  <!-- <script>
+ function rgb(){
+
+let arr = [...arguments]
+arr.forEach((el,i)=> {
+  if(el>255) {
+    arr[i] = 255
+  } 
+})
+
+let [r, g, b] = [...arr];
+
+function hex(color) {
+
+let arr = color.toString(16);
+if (arr.length == 1) {
+  return '0'+arr;
+} else if (arr.includes('-')) {
+  return '00';
+}
+else {
+  return arr.toUpperCase();
+}
+} 
+return  hex(r)+hex(g)+hex(b);
+}
+console.log(rgb(300,255,255));
+</script> -->
+
+  <!-- <script>
+    function strCount(obj) {
+      let counter = 0;
+      let rec = (object) => {
+        console.log(object);
+        for (let key in object) {
+          if (typeof object[key] == 'string') {
+            counter += 1;
+          }
+          if (typeof object[key] == 'object') {
+              rec(object[key])
+            }
+          }
+          return counter;
+        }      
+      return rec(obj)
+    }
+    console.log(strCount({
+      first: "1",
+      second: "2",
+      third: false,
+      fourth: ["anytime", 2, 3, 4],
+      fifth: null,
+      sixth: undefined,
+      seventh: {}
+    }));
+  </script> -->
+
+  <!-- <script>
+ function convert(input, source, target) {
+	let s = 0;
+	let str = '';
+	for (let i = 0; i < input.length; i++) {
+		s = s * source.length + source.indexOf(input[i]);
+	}
+	s//?
+	while (s > 0) {
+		str = target[s % target.length] + str;
+		s = Math.floor(s / target.length);
+	}
+	return str ? str : target[0];
+}
+
+</script> -->
+
+  <!-- <script>
+    function getCard() {
+      let mixed = [];
+      function getRandomArbitrary(min, max) {
+        if (!mixed.includes(Math.floor(Math.random() * (max - min + 1) + min))) {
+          mixed.push(Math.floor(Math.random() * (max - min + 1) + min));
+        }
+        // console.log(mixed-);
+      }
+      function calc(alph, count, min, max) {
+        let arr = [];
+        for (let i = 0; i < count; i++) {
+          getRandomArbitrary(min, max)
+        }
+        console.log(mixed);
+        // for (let i = 0; i < count; i++) {
+        //   arr.push(alph + getRandomArbitrary(min, max))
+        // }
+        return arr;
+      }
+      return calc('B', 5, 1, 15)
+        .concat(calc('I', 5, 16, 30), calc('N', 4, 31, 45), calc('G', 5, 46, 60), calc('O', 5, 61, 75));
+    }
+    console.log(getCard());
+  </script> -->
+
+  <!-- <script>
+    function getCard() {
+      function getRandomArbitrary(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      function calc(alph, count, min, max) {
+        let arr = [];
+        for (let i = 0; i < count; i++) {
+          
+          let check = () => {
+            let random = alph + getRandomArbitrary(min, max);
+            if (!arr.includes(random)) {             
+              return arr.push(random);
+            }
+            return check();            
+          }
+          
+          check();
+        }
+        return arr;
+      }
+      return calc('B', 5, 1, 15).concat(calc('I', 5, 16, 30), calc('N', 4, 31, 45), calc('G', 5, 46, 60), calc('O', 5, 61, 75));
+    }
+    console.log(getCard());
+  </script> -->
+
+  <!-- <script>
+    function countBites(n) {
+let bit = n.toString(2).split('');
+let counter = 0;
+for (let i = 0; i < bit.length; i++) {
+  if (bit[i] == 1) {
+    counter += 1;
+  }
+}
+console.log(bit);
+return counter;
+}
+    console.log(countBites(51));
+  </script> -->
+
+  <!-- <script>
+  function whatTimeIsIt(a) { 
+    let time = a*2;
+    let m = Math.floor(time % 60);
+    let h = Math.round((time - m) / 60) ;
+    if (time<60){h = 12}
+return  `${h.toString().split('').length == 2 ? h : `0${h}`}:${m.toString().split('').length == 2 ? m : `0${m}`}`;
+}
+console.log(whatTimeIsIt(1));
+</script> -->
+
+  <!-- <script>
+  
+function isPrime(num) {
+  let s = Math.sqrt(num)
+  for (let i = 2; i <= s; i++) {    
+    if (num % i === 0) {
+      return false;
+    }   
+  }
+  return num>1; 
+}
+console.log(isPrime(9));
+
+</script> -->
+
+  <!-- <script>
+  function toWeirdCase(str){
+    let arr = str.split(' ');
+    console.log(arr);
+    console.log(str.split(' ').map(word => word.split('').map((a,b) => b%2? a.toLowerCase(): a.toUpperCase())));
+  return str.split(' ').map(word =>
+    word.split('').map((itm, idx) => idx % 2 ? itm.toLowerCase() : itm.toUpperCase()).join('')).join(' ')
+}
+console.log(toWeirdCase('This is a test'));
+console.log(6%2);
+return string.split(' ').map(word => word.split('')).map((a, b) => b%2 ? a.toLowerCase() : a.toUpperCase().join('')).join(' ')
+</script> -->
+
+  <!-- <script>
+  function likes(names) {
+    if (names.length < 1) {
+      return 'no one likes this';
+    }
+    if (names.length == 1) {
+      return  names[0] + ' likes this' 
+    }
+    if (names.length == 2) {
+      return names[0] +' and '+ names[1]+ ' like this'
+    }
+    if (names.length == 3) {
+      return names[0]+', ' + names[1] +' and '+ names[2]+ ' like this'
+    }
+      
+    if (names.length > 3) {
+      return names[0]+', ' + names[1] +' and '+ (names.length -2) + ' others like this'
+    }    
+}
+
+console.log(likes(['Alex', 'Jacob', 'Mark', 'Max', 'dodik']));
+</script> -->
+
+  <!-- <script>
+  function bingo(ticket, win){
+  if(ticket.filter(a => a[0].split('').some(b => b.charCodeAt(0) == a[1])).length >= win) {
+    return "Winner!";
+  }
+  return "Loser!";
+}
+</script> -->
+
+  <!-- <script>
+  function pigIt(str){
+    // let arr = str.split(' ').map(word => word.split(''));
+    // let hui = str.split(' ').map(word => word.split(''))
+    // .map((arr) => arr.splice(0,1, 'X'))
+console.log(str.split(' ').map(word => word.split('')).map((arr) => arr.splice(1,arr.length).join('')+arr[0]).map(a => !a.includes('!') && !a.includes('?') ? a+'ay' : a+'').join(' '))
+// .join('')+arr[0]+'ay').join(' '));
+// console.log(arr.map((arr) => arr.splice(0,1, [arr[0]])) );
+// let cut = hui.map(i => i.splice(1,i.length, 'lol'))
+// console.log(hui);
+// console.log(cut);
+return str.split(' ').map(word => word.split('')).map((arr) => arr.splice(1,arr.length).join('')+arr[0]+'ay').join(' ');
+}
+console.log(pigIt('0 Hello is world ?'));
+
+// .map((arr, i) => arr.push(arr.splice(0,1)))
+</script> -->
+
+  <!-- <script>
+  function toWeirdCase(string){
+  return string.split(' ')
+  .map(word => word.split('')
+  .map((a, b) => b%2 ? a.toLowerCase() : a.toUpperCase()).join('')).join(' ')
+}
+</script> -->
+
+  <!-- <script>
+  let i = ['1', '2', '3']
+  i.splice(0,1, '5')
+  console.log(i);
+</script> -->
+
+  <!-- <script>
+  const MORSE_TABLE = {
+    '.-':     'a',
+    '-...':   'b',
+    '-.-.':   'c',
+    '-..':    'd',
+    '.':      'e',
+    '..-.':   'f',
+    '--.':    'g',
+    '....':   'h',
+    '..':     'i',
+    '.---':   'j',
+    '-.-':    'k',
+    '.-..':   'l',
+    '--':     'm',
+    '-.':     'n',
+    '---':    'o',
+    '.--.':   'p',
+    '--.-':   'q',
+    '.-.':    'r',
+    '...':    's',
+    '-':      't',
+    '..-':    'u',
+    '...-':   'v',
+    '.--':    'w',
+    '-..-':   'x',
+    '-.--':   'y',
+    '--..':   'z',
+    '.----':  '1',
+    '..---':  '2',
+    '...--':  '3',
+    '....-':  '4',
+    '.....':  '5',
+    '-....':  '6',
+    '--...':  '7',
+    '---..':  '8',
+    '----.':  '9',
+    '-----':  '0',
+};
+
+//  function decode(expr) {
+// return expr.split('   ').map(a => a.split(' ').map(b => MORSE_TABLE[b]).join('')).join(' ');
+// }
+
+function decode(expr) {
+    let arr = expr.match(/.{10}/g);
+    console.log(expr.match(/.{10}/g).map(item => item.replace(/0{2,}/, '').replace(/10/g, '.').replace(/11/g, '-').replace(/\*/g, ' ')).map(i => i==0 ? ' ' : MORSE_TABLE[i]).join(''));
+    let morse = arr.map((item) => item.replace(/0{2,}/, '').replace(/10/g, '.').replace(/11/g, '-').replace(/\*/g, ' '));
+    return (morse.map((item) => (item == 0) ? ' ' : MORSE_TABLE[item])).join('');
+}
+console.log(decode('00101010100000000010001011101000101110100000111111**********00001011110000111111000010111000101110100000111010'));
+</script> -->
+
+  <!-- <script>
+function towelSort(matrix) {
+    let newArr = [];
+    for (let key in matrix) {
+        if (key % 2 !== 0) {
+            newArr.push(...matrix[key].reverse());
+        }
+        else {
+            newArr.push(...matrix[key])
+        }
+    }
+    return newArr;
+}
+function towelSort(matrix) {
+    let newArr = [];
+    for (let key in matrix) {
+       key % 2 !== 0 ? newArr.push(...matrix[key].reverse()) : newArr.push(...matrix[key])
+    }
+    return newArr;
+}
+console.log(towelSort([
+[1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+        [13, 14, 15, 16],
+    ]));
+</script> -->
+
+  <!-- <script>
+  function towelSort (matrix = []) {
+  let resultArr = [];
+  matrix.forEach((element, index) => {
+    index % 2 ? resultArr.push(...element.reverse()) : resultArr.push(...element)
+  });
+  return resultArr;
+}
+console.log(towelSort([
+[1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+        [13, 14, 15, 16],
+    ]));
+</script> -->
+
+  <!-- <script>
+  const config1 = [['(', ')']];
+const config2 = [['(', ')'], ['[', ']']];
+
+  function check(str, bracketsConfig) {
+  const brackets = bracketsConfig.map(pair => pair.join(''))
+  for (let i = 0; i < brackets.length;) {
+    if (str.includes(brackets[i])) {
+      str = str.replace(brackets[i], '')
+      i = 0
+    }
+    else i++
+  }
+  return str === ''
+  }
+
+  assert.equal(check('()', config1), true);
+  assert.equal(check('[(])', config2), false);
+
+</script> -->
+
+  <!-- <script>
+  // function lol() {
+  //   console.log('kek');
+  //   localStorage.setItem('win', i)
+  //   console.log(lol);
+  //   console.log(y);
+  // }
+  // lol()
+  let arr = []
+  arr.push({x: 'hui'})
+  let a1 = JSON.stringify(arr)
+  console.log('a1', a1, typeof a1);
+  let a2 = JSON.parse(a1)
+  console.log('a2', a2, typeof a2);
+  a2.push({x: 'NE HUI'})
+  console.log(a2);
+  
+
+</script> -->
+
+  <!-- <script>
+    function absentVowel(x) {
+      let data = {
+        a: 0,
+        e: 1,
+        i: 2,
+        o: 3,
+        u: 4
+      }
+      for (let key in data) {
+        if (!x.includes(key)) {
+          return data[key]
+        }
+      }
+    }
+    console.log(absentVowel("John Doe hs seven red pples under his bsket")); 
+  </script> -->
+
+  <!-- <script>
+    function getMiddle(s) {
+      let arr = s.split('')
+      console.log(arr);
+      for (let i = 0; i < s.length; i++) {
+        if (s.length % 2 == 0) {
+          let num = s.length / 2
+          return arr[num - 1] + arr[num]
+        }
+        if (s.length % 2 !== 0) {
+          let num = Math.floor(s.length/2)
+          console.log(num);
+          return arr[num]
+        }
+      }
+    }
+    console.log(getMiddle("tests"));
+  </script> -->
+
+  <!-- <script>
+    function getMiddle(s) {
+      let sp = s.split('');
+      let l = s.length;
+      return l % 2 == 0 ? sp[l / 2 - 1] + sp[l / 2] : sp[Math.floor(l / 2)]
+
+
+      // let arr = s.split('')
+      // console.log(arr);
+      // for (let i = 0; i < s.length; i++) {
+      //   if (s.length % 2 == 0) {
+      //     let num = s.length / 2
+      //     return arr[num - 1] + arr[num]
+      //   }
+      //   if (s.length % 2 !== 0) {
+      //     let num = Math.floor(s.length/2)
+      //     console.log(num);
+      //     return arr[num]
+      //   }
+      // }
+    }
+    console.log(getMiddle("test"));
+  </script> -->
+
+  <!-- <script>
+function highAndLow(n){
+let result = n.split(' ').map(e=>e*1).sort((a,b)=>{return a-b})
+console.log(result);
+let a = result.splice(1,  - 2)
+console.log(a);
+return result[result.length - 1] + ' ' + result[0]
+}
+
+  console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+</script> -->
+
+  <!-- <script>
+  function toJadenCase (text) {
+    return text.split(' ').map(e => e[0].toUpperCase()+e.slice(1)).join(' ')   
+};
+// {e.split(''); return e[0].toUpperCase()+e.splice(1,1)}
+  console.log(toJadenCase("How can mirrors be real if our eyes aren't real"));
+</script> -->
+
+  <!-- <script>
+    function disemvowel(str) {
+      let vowels = ['i', 'e', 'o', 'a', 'u', 'I', 'E', 'O', 'A', 'U']
+      return str.split('').map(el => {
+        if (!vowels.includes(el)) {
+          return el
+        }
+      }).join('');
+    }
+
+    console.log(disemvowel("This website is for losers LOL!"));
+  </script> -->
+
+  <!-- <script>
+    function isIsogram(str) {
+      let arr = str.toLowerCase().split('');
+      console.log(arr);
+      let cache;
+      for (let i = 0; i < str.length; i++) {
+        cache = str[i];
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (cache == arr[i]) {
+            count++
+          }
+          if (count == 2) {
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+    console.log(isIsogram("isogramM"));
+  </script> -->
+
+
+  <!-- <script>
+    function explode(s) {
+      let arr = s.split('');
+      let resultArray = [];
+      let counter = 0;
+      
+      let count = (i) => {
+        if (counter < i) {
+          resultArray.push(i) * i
+          counter++
+        } else {
+          return counter = 0;
+        }
+        count(i);
+      }
+      for (let i = 0; i < arr.length; i++) {
+        count(arr[i])
+      }      
+      return resultArray.join('');
+    }
+    console.log(explode('312'));
+  </script> -->
+
+  <!-- <script>
+  function getParticipants(handshakes){
+  if(!handshakes) return 1;
+
+  let answer = 0;
+  let sum = 0
+
+  while(handshakes > sum) {
+    sum = answer * (answer + 1) / 2;
+    answer++;
+  }
+  return answer;
+}
+console.log(getParticipants(7));
+</script> -->
+
+  <!-- <script>
+let s = '73304'
+let r = s.split('').map(e => e**3).reduce((sum,el)=> sum+el,0)
+console.log(r);
+
+
+    function revrot(str, sz) {
+      if(sz < 1 || !str || sz > str.length) return "";
+      let array = str.split('')
+      let slicedArr = [];
+      for (let i = 0; i < array.length; i += sz) {
+        slicedArr.push(array.slice(i, i + sz))
+      }
+     
+      let result = [];
+      for (let i = 0; i < Math.floor(str.length / sz); i++) {
+        let a = slicedArr[i].map(e => e**3).reduce((sum,el)=> sum+el,0)
+        a % 2 == 0
+          ? result.push(slicedArr[i].reverse().join(','))
+          : result.push(slicedArr[i].slice(1) + ','+ slicedArr[i][0])
+      }
+      return result.join(',').split(',').join('')
+    }
+    console.log(revrot("733049910872815764", 5));
+
+
+    // function revrot(str, sz) {
+    //   ln = str.length;
+    //   if (sz < 1 || !str || sz > ln) return "";
+
+    //   const test = s => Array.prototype.reduce.call(s, (acc, val) => acc + Number(val) ** 3, 0) % 2 === 0;
+    //   const reverse = s => s.split("").reverse().join("");
+    //   const rotate = s => s.slice(1) + s.slice(0, 1);
+
+    //   let arr = [];
+    //   for (let i = 0; i < ln; i += sz) arr.push(i + sz <= ln ? str.slice(i, i + sz) : "")
+    //   return arr.map(x => test(x) ? reverse(x) : rotate(x)).join("");
+    // }
+
+  </script> -->
+
+  <!-- <script>
+    function solution(number) {
+      if (number <= 0) return 0;
+      let arr = []
+      for (let i = 0; i < number; i++) {
+        if (i % 3 == 0 || i % 5 == 0) arr.push(i)
+      }
+      return arr.reduce((sum, el) => sum + el)
+    }
+    console.log(solution(16));
+  </script> -->
+
+  <!-- <script>
+    function deepCount(a) {
+      return a.reduce((s, e) => s + (Array.isArray(e) ? deepCount(e) : 0), a.length);
+    }
+    // console.log(deepCount([1, 2, [3, 4, [5]]]));
+    console.log(deepCount([[[[[[[[[]]]]]]]]]));
+  </script> -->
+
+  <!-- <script>
+    // var validWord = function (dictionary, word) {
+    //   // console.log(word.includes(dictionary[0]));
+    //   if (dictionary.length === 0) return false;
+    //   if (dictionary.join('')==word) return true;
+    //   if (dictionary.reverse().join('')==word) return true;
+
+    //   for(let i = 0;i<dictionary.length;i++) {
+    //     if(dictionary[i].includes(word)) return true;
+    //   }
+    //   let arr = word.split()
+    //   console.log(arr.includes(dictionary[0]));
+    //   if(arr.some((el, i, dictionary)=> {})) return 1
+    //   return false;
+    // };
+
+    // var validWord = function (dictionary, word) {
+    //   console.log(1
+    //   );
+    //   dictionary = dictionary.sort((a, b) => a.length - b.length)
+    //   console.log(dictionary);
+    //   for (let i = 0; i < dictionary.length; i++) {
+    //     word = word.replace(new RegExp(dictionary[i], 'g'), '')
+    //   }
+    //   return !word.length
+    // };
+
+    var validWord =  function(dictionary, word) {
+      console.log(new RegExp(`^(?:${dictionary.join('|')})+$`));
+  return new RegExp(`^(?:${dictionary.join('|')})+$`).test(word);
+};
+
+    console.log(validWord(['fgmz','fg','g','nib','giq','gqph','i'], 'fgmzfg'));
+  </script> -->
+
+  <!-- <script>
+    function sortByBit(arr) {
+      const countBit = (bit) => bit.toString(2).replace(/[0]/g, '').length
+      return arr.sort((a, b) => countBit(a) === countBit(b) ? a - b : countBit(a) - countBit(b))
+    }
+    console.log(sortByBit([3, 8, 3, 6, 5, 7, 9, 1]));
+
+    // function sortByBit(arr) {
+    //   let a = arr.sort()
+    //   let b = a.map(e => e.toString(2).split(''))
+    //   console.log(a);
+    //   console.log(b);
+    //   // .map(e=> {
+    //   //   if(e==1) return 1
+    //   // })
+    //   let array =[]
+    //   for (let i = 0; i < b.length; i++) {
+    //     let step = b[i].map(e=>{if(e==1)return e}).join('')
+    //     array.push(step)
+    //     // console.log(array);
+    //     // for (let i = 0; i < b.length; i++) {
+    //     //   if(step[i]==1) {
+    //     //     array.push(step[i])
+    //     //   }
+    //     // }
+    //   }
+    //   console.log(array);
+    //   let obj = {}
+    //   for (let i = 0; i < a.length; i++) {
+    //     obj[a[i]] = array[i]
+    //   }
+    //   let ob = Object.entries(obj)
+    //   console.log(ob);
+    //   console.log(obj.map(e=> e.sort((a,b)=> {a-b})));
+
+    //   // let bitsArray = arr.sort().forEach(e => Number(e.toString(2).split('').sort().join('')))
+    //   // // let res = bitsArray.map(e => parseInt(e, 2))
+    //   // console.log(bitsArray);
+    //   // console.log(res);
+    //   // console.log(bitsArray.sort());
+    // }
+    // [1, 8, 3, 3, 5, 6, 9, 7]
+  </script> -->
+
+  <!-- <script>
+    function formatDuration(s) {
+      if (s == 0) return 'now';
+      let Obj = {}
+      Obj.second = Math.round(s % 60)
+      Obj.minute = Math.floor(s / 60) >= 60 ? Math.floor(s / 60) % 60 : Math.floor(s / 60)
+      Obj.hour = Math.floor(s / 60 / 60) > 24 ? Math.floor(s / 60 / 60) % 24 : Math.floor(s / 60 / 60)
+      Obj.day = Math.floor(s / 60 / 60 / 24) > 365 ? Math.floor(s / 60 / 60 / 24) % 365 : Math.floor(s / 60 / 60 / 24)
+      Obj.year = Math.floor(s / 60 / 60 / 24 / 365)
+      let resultArr = [];
+      let resolver = (value, base, resultArr) => {
+        if (!value) return
+        if (value === 1) {
+          resultArr.push(`${value} ${base}`)
+        } else {
+          resultArr.push(`${value} ${base}s`)
+        }
+      }
+      for (let key in Obj) {
+        resolver(Obj[key], key, resultArr)
+      }
+      resultArr.reverse()
+      let result = ""
+      let lastValue
+      if (resultArr.length > 1) {
+        lastValue = resultArr.splice(resultArr.length - 1, 1)
+      }
+      result = resultArr.join(', ')
+      if (lastValue) {
+        result += ' and ' + lastValue
+      }
+      return result
+    }
+
+    console.log(formatDuration(98999961));
+
+  </script> -->
+
+  <!-- <script>
+    function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  
+}
+console.log(checkCoupon('123a','123','September 5, 2014','October 1, 2014'));
+  </script> -->
+
+  <!-- <script>
+    function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+      let d = new Date(currentDate)
+      console.log(d);
+      return enteredCode===correctCode && Date.parse(currentDate) <= Date.parse(expirationDate)  
+      // let arr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+      // let cur = currentDate.split(' ')
+      // let exp = expirationDate.split(' ')
+      // // let month = arr.indexOf(cur[0])+1
+      // let curDay = cur[1].split('')
+      // let expDay = exp[1].split('')
+      // // console.log(month);
+      // // console.log(cur[1].split(''));
+      // currentDate = new Date()
+      // let curDate = new Date(cur[2], arr.indexOf(cur[0]) + 1, curDay[0])
+      // let newDate = new Date(exp[2], arr.indexOf(exp[0]) + 1, expDay[0])
+      // // console.log(curDate>newDate);
+      // return enteredCode==correctCode && curDate<=newDate
+    }
+    console.log(Date.parse('October 1, 2014'));
+    console.log(checkCoupon('123', '123', 'October 1, 2014', 'October 1, 2014'));
+  </script> -->
+
+  <!-- <script>
+    function unluckyDays(year) {
+      const unluckyDays = year => {
+        const names = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+        const months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        const fridays13 = months.map(month => {
+          const date = new Date(year, month - 1, 1)
+          let count = 0
+          while (date.getMonth() === month - 1) {
+            const day = `${date.getDate()}-${names[date.getDay()]}`
+            if (day === '13-fri') count++
+            date.setDate(date.getDate() + 1)
+          }
+          return count
+        })
+        return fridays13.reduce((total, friday) => total + friday, 0)
+      }
+    }
+  </script> -->
+
+  <!-- <script>
+    var runLengthEncoding = function (str) {
+      const arr = [];
+      let count = 1;
+      for (let i = 0; i < str.length; i++) {
+        if (str[i] !== str[i + 1]) {
+          arr.push([count, str[i]]);
+          count = 1;
+        } else {
+          count++;
+          
+        }
+      }
+      return arr;
+    }
+  </script> -->
+</div>
+
+</body>
+
+
+</html>
