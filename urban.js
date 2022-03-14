@@ -8,43 +8,41 @@ WordDictionary.prototype.addWord = function (word) {
 };
 
 WordDictionary.prototype.search = function (word) {
+  // console.log(word.includes('.'));
+  if (word.includes('.')) {
+    this.arr.forEach(e => {
+      if (e.length === word.length) {
+        return true
+      }
+    })
+  }
   if (word.length > 10) return false
+  if (this.arr.includes(word)) return true
+
   let newArr = []
   this.arr.forEach(e => {
     if (e.length == word.length) {
-      if (e[0] == word[0] || word[0]=='.') newArr.push(e)
+      if (e[0] == word[0] || word[0] == '.') newArr.push(e)
     }
   })
-  console.log(newArr);
-  let res = false;
-  let str = word.split('')
-  // let step
-  // let midArr = []
-  // for (let i = 0; i < this.arr.length; i++) {
-  //   step = this.arr[i].split('')
-  //   if (str.length == step.length) {
-  //     midArr.push(step)
-  //   }
-  // }
-  let st
-  for (let i = 0; i < newArr.length; i++) {
-    st = newArr[i]
-    // if (str[i] !== st[i]) return
-    if (str[i] == st[i]) {
-      res = true
-    }
-    else if (str[i] == '.') {
-      res = true
-    }
-    else {
-      res = false
-    }
-  }
-  return res
+  let wordArr = []
+  word.split('').forEach((el, i) => {
+    if (el == '.') wordArr.push(i)
+  });
+  let result = []
+  newArr.forEach(w => {
+    let splitW = w.split('')
+    let maped = splitW.map((el, i) => {
+      if (!wordArr.includes(i)) return el
+    })
+    result.push(maped.join(''))
+  })
+  let govno = word.split('.').join('')
+  return result.includes(govno) 
 };
 
 let wd = new WordDictionary()
-wd.addWord('a');
+wd.addWord('.a');
 wd.addWord('at');
 wd.addWord('ate');
 wd.addWord('ear');
@@ -61,7 +59,7 @@ wd.addWord('etlad');
 // console.log(wd.search('e.'));
 // console.log(wd.search('ea.'));
 // console.log(wd.search('ea..'));
-console.log(wd.search('.tl..'));
+console.log(wd.search('.s'));
 
 // let s1 = 'ear'
 // let s2 = 'ea'
@@ -94,6 +92,52 @@ console.log(wd.search('.tl..'));
   // let newArr = []
   // this.arr.forEach(e => { if (e.length == word.length) newArr.push(e) })
   // // console.log(newArr);
+  // let res = false;
+  // let str = word.split('')
+  // // let step
+  // // let midArr = []
+  // // for (let i = 0; i < this.arr.length; i++) {
+  // //   step = this.arr[i].split('')
+  // //   if (str.length == step.length) {
+  // //     midArr.push(step)
+  // //   }
+  // // }
+  // let st
+  // for (let i = 0; i < newArr.length; i++) {
+  //   st = newArr[i]
+  //   // if (str[i] !== st[i]) return
+  //   if (str[i] == st[i]) {
+  //     res = true
+  //   }
+  //   else if (str[i] == '.') {
+  //     res = true
+  //   }
+  //   else {
+  //     res = false
+  //   }
+  // }
+  // return res
+
+
+   // console.log();
+  // let result = newArr.map()
+  // newArr.forEach(el => {
+  //  let elem = el.split('')
+  //  let re = elem.map((e,i,wordArr) => {
+  //   console.log(wordArr);
+  //   if (wordArr.includes(i))  return null;
+  //   else return e
+
+  // })
+  //   result.push(re)
+  // })
+  // for (let i = 0; i < word.length; i++) {
+  //   s = newArr[i].split('')
+  //   // if (i == wordArr[i])
+  //   console.log(s);
+  // }
+  // console.log(newArr);
+  // console.log(wordArr);
   // let res = false;
   // let str = word.split('')
   // // let step
