@@ -73,3 +73,73 @@
 //   return this.message;
 // }
 // console.log(getMessage.call(details));
+
+
+// for (var i = 0; i < 10; i++) {
+
+// }
+// console.log(i);
+
+
+// for(var i = 0; i<3;i++) {
+//   setTimeout(function() {
+//     console.log(i);
+//   }, 1000)
+// }
+
+
+// printMessage();
+// function printMessage() {
+//   console.log('hello');
+// }
+
+
+// function getThis() {
+//   return this;
+// }
+// console.log(getThis());
+
+
+// const details = {
+//   name: 'john',
+// }
+// function getMessage(message) {
+//   return `${message} ${this.name}`;
+// }
+// console.log(getMessage.apply(details, ['Hello']));
+
+
+console.log(message);
+var message = 'hello'
+
+
+// function foo(a, b) {
+//   return a*b
+// }
+// const bar = foo.bind(null, 2)
+// bar(2)
+
+
+// var a = 1, b = function a(x) {x && a(--x);};
+// console.log(a)
+
+
+// "use strict";
+// function getThis() {
+//   return this;
+// }
+// console.log(getThis());
+
+
+// var name = 'john';
+// var user = {
+//   name: 'peter',
+//   printMessage() {
+//     console.log(`Hello, ${this.name}`);
+//   }
+// };
+// var printMessage = user.printMessage;
+// printMessage()
+
+function foo() {console.log(this);}
+foo.call(null);
