@@ -109,8 +109,8 @@
 // console.log(getMessage.apply(details, ['Hello']));
 
 
-console.log(message);
-var message = 'hello'
+// console.log(message);
+// var message = 'hello'
 
 
 // function foo(a, b) {
@@ -141,5 +141,9 @@ var message = 'hello'
 // var printMessage = user.printMessage;
 // printMessage()
 
-function foo() {console.log(this);}
-foo.call(null);
+// function foo() {console.log(this);}
+// foo.call(null);
+
+// const showRS = (year, quarter) => year + quarter
+// console.log('RSSchool ' + showRS('2021', 'Q3'));
+
