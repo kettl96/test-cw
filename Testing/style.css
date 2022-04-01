@@ -6,17 +6,43 @@
   grid-row-end: span 2;
   grid-area: auto;
 }
-div {
+/* div {
 }
 .one {
   background-color: aqua;
-
+  font-size: 1rem;
 }
 .two {
   background-color: black;
+  font-size: 0.8rem;
 
 }
 .three {
   background-color: aqua;
+  font-size: 0.5rem;
 
+}
+
+ul {
+  font-size: 40px;
+}
+ul li {
+  font-size: 0.8em;
+} */
+
+
+/* body {
+  font-size: 1rem;
+
+} */
+/* .head {
+  font-size: 0.8rem;
+
+} */
+
+html {
+  font-size: 20px;
+}
+body {
+  font-size: 2rem;
 }
