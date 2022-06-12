@@ -39,8 +39,24 @@ Array.prototype.odd = function () {
   return this.filter(function (item) { return 0 != item % 2; });
 }
 
-console.log(2**3);
-Array.prototype.reduce = function(process, memo = this.shift()) {
-  this.forEach( (e) => memo = process(memo, e) );
+console.log(2 ** 3);
+Array.prototype.reduce = function (process, memo = this.shift()) {
+  this.forEach((e) => memo = process(memo, e));
   return memo;
 }
+
+
+let Cat = function (name, weight) {
+  Cat.count = (Cat.count || 0) + 1;
+  Cat.sum = (Cat.sum || 0) + weight;
+  Object.defineProperty(
+    this, "weight", {
+    get: function () { return weight },
+    set: function (e) { Cat.sum -= weight; Cat.sum += e; weight = e }
+  }
+  )
+};
+
+Cat.averageWeight = function () { return Cat.sum / Cat.count }
+
+
